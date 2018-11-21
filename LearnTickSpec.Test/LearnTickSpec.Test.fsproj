@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Addition.feature" />
+    <Compile Include="Addition.Steps.fs" />
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Expecto" Version="8.*" />
+    <PackageReference Include="FSharp.Core" Version="4.*" />
+    <PackageReference Include="TickSpec" Version="1.1.0" />
+    <PackageReference Include="YoloDev.Expecto.TestSdk" Version="0.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LearnTickSpec.Core\LearnTickSpec.Core.fsproj" />
+  </ItemGroup>
+</Project>
